@@ -44,23 +44,16 @@ def midi_to_json(midi_path, template_dir, output_path):
                 current_time += msg.time
                 y_pos = current_time
                 sound_parameters = {}
-                for k, v in template.items():
-                    if k == "p_base_freq":
-                        sound_parameters["frequencyBase"] = freq
-                    elif k == "p_freq_limit":
-                        sound_parameters["frequencyLimit"] = freq
-                    elif k == "p_freq_ramp":
-                        sound_parameters["frequencyRamp"] = v
-                    elif k == "p_freq_dramp":
-                        sound_parameters["frequencyDeltaRamp"] = v
-                    elif k == "p_env_punch":
-                        sound_parameters["pitchJumpMod"] = v
-                    elif k == "p_duty_ramp":
-                        sound_parameters["dutyCycleRamp"] = v
-                    elif k == "p_pha_offset":
-                        sound_parameters["flangerFrequency"] = v
-                    elif k == "p_hpf_freq":
-                        sound_parameters["highPassFilterFrequency"] = v
+                    sound_parameters = {
+                        "frequencyBase": freq,
+                        "frequencyLimit": freq,
+                        "frequencyRamp": -100,
+                        "frequencyDeltaRamp": -100,
+                        "pitchJumpMod": 0.10000000149011612,
+                        "dutyCycleRamp": -1,
+                        "flangerFrequency": 0.04607183486223221,
+                        "highPassFilterFrequency": 18.271696090698242
+                    }
                 node = {
                     'levelNodeSound': {
                         'position': {'x': 0, 'y': y_pos, 'z': 0},
