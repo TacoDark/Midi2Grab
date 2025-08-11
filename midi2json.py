@@ -59,7 +59,7 @@ def midi_to_json(midi_path, template_dir, output_path):
                         'position': {'x': 0, 'y': y_pos, 'z': 0},
                         'parameters': sound_parameters,
                         'name': instrument_name,
-                        'volume': 100,
+                        'volume': 1,
                         'maxRangeFactor': 1,
                         'rotation': {'x': 0, 'y': 0, 'z': 0, 'w': 1},
                         'scale': {'x': 1, 'y': 1, 'z': 1}
