@@ -52,14 +52,14 @@ def midi_to_json(midi_path, template_dir, output_path):
                         "pitchJumpMod": 0.10000000149011612,
                         "dutyCycleRamp": -1,
                         "flangerFrequency": 0.04607183486223221,
-                        "highPassFilterFrequency": 18.271696090698242
+                        "highPassFilterFrequency": 3000
                     }
                 node = {
                     'levelNodeSound': {
                         'position': {'x': 0, 'y': y_pos, 'z': 0},
                         'parameters': sound_parameters,
                         'name': instrument_name,
-                        'volume': -1,
+                        'volume': 100,
                         'maxRangeFactor': 1,
                         'rotation': {'x': 0, 'y': 0, 'z': 0, 'w': 1},
                         'scale': {'x': 1, 'y': 1, 'z': 1}
