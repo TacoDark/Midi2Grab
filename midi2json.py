@@ -44,7 +44,7 @@ def midi_to_json(midi_path, template_dir, output_path):
                 current_time += msg.time
                 y_pos = current_time
                 sound_parameters = {}
-                    sound_parameters = {
+                sound_parameters = {
                         "frequencyBase": freq,
                         "frequencyLimit": freq,
                         "frequencyRamp": -100,
