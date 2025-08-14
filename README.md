@@ -1,6 +1,6 @@
 # Midi2Grab
 Open Source project for converting a midi file to a json file
-
+Discord: https://discord.gg/UzsCvcjYfD
 # ISSUES
 Sound block doesnt play any sound.
 
